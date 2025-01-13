@@ -1,0 +1,73 @@
+.card {
+  border: 1px solid #ddd;
+}
+
+.carousel .carousel-inner img {
+  height: 500px;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h5,
+h6 {
+  word-wrap: break-word;
+}
+mat-dialog-content {
+  max-height: 97vh;
+}
+
+.img-thumbnail {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.img-thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.row.g-2 .col-3 {
+  flex: 0 0 auto;
+  max-width: 20%;
+}
+
+@media (max-width: 576px) {
+  .row.g-2 .col-3 {
+    flex: 0 0 auto;
+    max-width: 33.333%;
+  }
+}
+
+ input {
+  border-radius: 4px 0px 0px 4px;
+  border-color: transparent;
+  background-color: #f6f6f6;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+ input:focus {
+  box-shadow: none;
+  outline: none;
+}
+.card-body button {
+  background-color: #00AEFF;
+  color: white;
+}
+
+.alert-success {
+  padding: 0.5rem;
+  margin-bottom: 0.1rem;
+  border-radius: 4px;
+  color: #007908;
+}
+
+
+.house-detail-description {
+  border-top: 1px solid #eae5e1;
+}

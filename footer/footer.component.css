@@ -1,0 +1,14 @@
+
+footer {
+  background-color: #2F5E99;
+  color: white;
+}
+
+footer .container li > a {
+  text-decoration: none;
+  color: #FFFFFF9C;
+}
+
+footer .container .list-unstyled i {
+  font-size: 13px;
+}

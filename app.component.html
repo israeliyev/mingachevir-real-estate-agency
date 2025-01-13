@@ -1,0 +1,172 @@
+<app-navbar></app-navbar>
+<!--<router-outlet>-->
+  <body>
+
+  <div class="menu-section" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div *ngFor="let slide of slides; let i = index" class="carousel-item" [class.active]="i === currentSlide"
+           [style.background-image]="'url(' + slide.image + ')'">
+        <div class="carousel-overlay"></div>
+        <div class="carousel-caption d-none d-md-block d-flex justify-content-center align-items-center">
+          <div class="menu-wrapper container w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+            <span class="title">Find Your Perfect Home</span>
+            <div class="main-categories d-flex w-100 justify-content-center mt-4">
+              <a href="#" class="">KİRA</a>
+              <a href="#">Satış</a>
+            </div>
+            <div class="sub-categories d-flex w-100 mt-2 justify-content-center">
+              <div class="dropdown">
+                <button class="btn bg-white text-black rounded-pill" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false" (click)="toggleDropdown(true)">
+                  <span>Əmlak Növü</span>
+                </button>
+                <ul class="dropdown-menu" (click)="toggleDropdown(false)">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+
+              <div class="dropdown">
+                <button class="btn bg-white text-black rounded-pill" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false" (click)="toggleDropdown(true)">
+                  <span>Əmlak Növü</span>
+                </button>
+                <ul class="dropdown-menu" (click)="toggleDropdown(false)">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="house-section mt-5">
+    <div class="title w-100 d-flex justify-content-center">
+      <h1>Premium Evlər</h1>
+    </div>
+
+    <div class="houses container mt-5">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 g-4">
+        <div class="col">
+       <app-house-card></app-house-card>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="home-share-request mt-5 mb-5">
+    <div class="container py-4 rounded">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2 class="">Ev Elanı</h2>
+          <p class="text-muted">Sənində Evin Olsun Elanda!</p>
+          <div class="picture-upload">
+            <div class="row g-3">
+              <!-- Upload Box 1 -->
+              <div class="col-12 col-md-6">
+                <div class="upload-box d-flex justify-content-center align-items-center">
+                  <label class="text-center w-100">
+                    <input type="file" class="d-none">
+                    <span>Upload Image</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Upload Box 2 -->
+              <div class="col-12 col-md-6">
+                <div class="upload-box d-flex justify-content-center align-items-center">
+                  <label class="text-center w-100">
+                    <input type="file" class="d-none">
+                    <span>Upload Image</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Upload Box 3 -->
+              <div class="col-12 col-md-6">
+                <div class="upload-box d-flex justify-content-center align-items-center">
+                  <label class="text-center w-100">
+                    <input type="file" class="d-none">
+                    <span>Upload Image</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Upload Box 4 -->
+              <div class="col-12 col-md-6">
+                <div class="upload-box d-flex justify-content-center align-items-center">
+                  <label class="text-center w-100">
+                    <input type="file" class="d-none">
+                    <span>Upload Image</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <form>
+            <div class="mb-4">
+              <h5>Personal Information</h5>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <input type="text" class="form-control rounded-pill" placeholder="First name" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control rounded-pill" placeholder="Last name" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="email" class="form-control rounded-pill" placeholder="Email address" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="tel" class="form-control rounded-pill" placeholder="Phone number" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <h5>Property Information</h5>
+              <div class="row g-3">
+                <div class="col-12">
+                  <select class="form-select rounded-pill" required>
+                    <option selected disabled>Type</option>
+                    <option value="1">House</option>
+                    <option value="2">Apartment</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control rounded-pill" placeholder="Zip code" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control rounded-pill" placeholder="Your budget" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="number" class="form-control rounded-pill" placeholder="N. of bedrooms" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="number" class="form-control rounded-pill" placeholder="N. of bathrooms" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-end">
+              <button type="submit" class="btn rounded-pill px-4">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  </body>
+<!--</router-outlet>-->
+
+<app-footer></app-footer>
