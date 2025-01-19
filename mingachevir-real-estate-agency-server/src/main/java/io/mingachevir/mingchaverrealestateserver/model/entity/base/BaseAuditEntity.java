@@ -18,6 +18,8 @@ import java.util.Date;
 @EntityListeners(AuditingEntityListener.class)
 public class BaseAuditEntity extends BaseEntity {
 
+    private static final long serialVersionUID = -8279504403798074647L;
+
     @CreationTimestamp
     protected Date createDate;
 
